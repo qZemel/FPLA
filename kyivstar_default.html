@@ -1,10 +1,6 @@
 
 <div class="price-list-kyivstar">
     <style>
-            .zayac_sosi_huy {
-                color: "lgbtq+";
-            }
-        
             :root{
                 --between-margin: 10px;
                 --basic-color:rgb(0, 160, 227);
@@ -56,13 +52,14 @@
                 font-size: 12px;
                 text-align: start;
             }
-        
-            .chapter::after{
-                content: "_________________________________________________";
-                display: block;
-                margin-top: -8px;
+
+            hr{
+                position: relative;
                 width: 88%;
-                height: 1.5px;
+                height: 1px;
+                border: none;
+                left: -21;
+                background-color: var(--basic-color);
             }
 
             .price {
@@ -84,7 +81,17 @@
                 align-items: center;
                 font-size: 40px;
                 color: rgb(0, 0, 0);
-                background-color: rgb(255, 208, 46);
+                background-color: none;
+            }
+
+            .price-number img{
+                position: absolute;
+                z-index: 1;
+                width: 340px;
+            }
+
+            .price-number span{
+                z-index: 2;
             }
 
             .present {
@@ -105,6 +112,7 @@
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
+                margin-top: 5px;
             }
         
             .present-content-div{
@@ -134,13 +142,15 @@
         
             .chapter-present{
                 padding-left: 170px;
-                padding-top: 30px;
+                padding-top: 28px;
             }
         
-            .chapter-present::after{
-                content: "";
+            .chapter::after{
+                content: "____________________________________________________________";
                 display: block;
-                height: 0;
+                margin-top: -8px;
+                width: 88%;
+                height: 1.5px;
             }
         
             .char{
@@ -223,6 +233,10 @@
                 width: 50px;
                 height: 50px;
             }
+
+            .download-card-text{
+                margin-top: 5px;
+            }
         
             .bottom{
                 width: 100%;
@@ -275,13 +289,16 @@
 
         <div class="price">
             <a class="chapter">Роздрібна ціна</a>
-            <b class="price-number"><span class="Price">{Price}грн</span></b>
+            <div class="price-number">
+                <span class="Price">{Price}грн</span>
+                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iYiIgZGF0YS1uYW1lPSLQodC70L7QuSAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMzEuNTMgNjQuNSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5kIHsKICAgICAgICBmaWxsOiAjZmZkMDJlOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iYyIgZGF0YS1uYW1lPSLQodC70L7QuSAxIj4KICAgIDxyZWN0IGNsYXNzPSJkIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjMxLjUzIiBoZWlnaHQ9IjY0LjUiIHJ4PSIzMi4yNSIgcnk9IjMyLjI1Ii8+CiAgPC9nPgo8L3N2Zz4=" alt="">
+            </div>
             <a class="price-PDV hide"></a>
 
         </div>
 
         <div class="present">
-            <a class="chapter chapter-present">3 місяці у подарунок</a>
+            <a class="chapter chapter-present">3 місяці у подарунок</a> <style> .chapter-present::after{display: none;} </style>
 
             <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iYiIgZGF0YS1uYW1lPSLQodC70L7QuSAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1My4yNiA1My4yNiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5kIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuZSB7CiAgICAgICAgZmlsbDogIzAwYTBlNDsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJjIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDEiPgogICAgPHJlY3QgY2xhc3M9ImQiIHg9IjEuMTkiIHk9IjE2LjU1IiB3aWR0aD0iNTAuODQiIGhlaWdodD0iMzUuODUiLz4KICAgIDxwYXRoIGNsYXNzPSJlIiBkPSJtMzIuOTMsMjUuMTJoMTUuODJjLjc1LDAsMS4zNy0uNjIsMS4zNy0xLjM3di00LjA2YzAtLjc1LS42Mi0xLjM3LTEuMzctMS4zN2gtMTUuODJ2Ni44aDBaTTE0LjE1LDE1LjE4Yy0yLjA2LTEuMjMtMy42LTIuOTgtNC4wNS01LjQ5QzkuMDQsMy44NCwxMy44MS0uOTMsMTkuNjQuMTVjMy43OS43LDUuODQsMy44OCw2Ljk5LDcuNTEsMS4xNi0zLjY0LDMuMi02LjgxLDYuOTktNy41MSw1LjgzLTEuMDksMTAuNiwzLjY4LDkuNTQsOS41NC0uNDUsMi41MS0xLjk5LDQuMjYtNC4wNSw1LjQ5aDkuNjRjMi40OCwwLDQuNSwyLjAyLDQuNSw0LjV2NC4wNmMwLDEuODgtMS4xNywzLjUzLTIuODcsNC4ydjE3Ljg4YzAsNC4xLTMuMzQsNy40NC03LjQ0LDcuNDRIMTAuMzJjLTQuMSwwLTcuNDQtMy4zNC03LjQ0LTcuNDR2LTE3Ljg4Yy0xLjctLjY2LTIuODctMi4zMS0yLjg3LTQuMnYtNC4wNmMwLTIuNDgsMi4wMi00LjUsNC41LTQuNWg5LjY0LDBabTMuOTEtMS42M2MyLjEzLjc0LDQuNjIsMS4xMiw2LjgyLDEuMzgtLjQyLTMuNzEtMS40Ny0xMC45LTUuODEtMTEuNy0zLjcyLS42OS02LjU3LDIuMjItNS45MSw1LjkxLjQsMi4yMSwyLjQyLDMuNTUsNC44OSw0LjQxaDBabTEwLjMyLDEuMzhjMy43My0uNDQsMTAuOTMtMS40NCwxMS43MS01Ljc5LjY3LTMuNjktMi4xOS02LjYtNS45MS01LjkxLTQuMzQuODEtNS4zOCw3Ljk5LTUuODEsMTEuN2gwWm0xLjQyLDMuMzloLTYuMzR2MzEuODFoNi4zNHYtMzEuODFoMFptLTkuNDcsMEg0LjVjLS43NSwwLTEuMzcuNjItMS4zNywxLjM3djQuMDZjMCwuNzUuNjIsMS4zNywxLjM3LDEuMzdoMTUuODJ2LTYuOGgwWm0wLDkuOTNINi4wMXYxNy41N2MwLDIuMzcsMS45NCw0LjMxLDQuMzEsNC4zMWgxMC4wMXYtMjEuODhoMFptMTIuNjEsMjEuODhoMTAuMDFjMi4zNywwLDQuMzEtMS45NCw0LjMxLTQuMzF2LTE3LjU3aC0xNC4zMnYyMS44OFoiLz4KICA8L2c+Cjwvc3ZnPg==" alt="" class="present-content-corner">
             <div class="present-content">
@@ -301,7 +318,7 @@
         </div>
 
         <div class="char">
-            <a class="chapter" style="grid-area: 1 / 1 / 2 / 3;">Характеристики</a>
+            <a class="chapter" style="grid-area: 1 / 1 / 2 / 3;">Характеристики </a>
 
             <div style="grid-area: 2 / 1 / 3 / 2;" class="char-div">
                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iYiIgZGF0YS1uYW1lPSLQodC70L7QuSAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMi45MSAyMi45MSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5kIHsKICAgICAgICBmaWxsOiAjMjExZjIyOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iYyIgZGF0YS1uYW1lPSLQodC70L7QuSAxIj4KICAgIDxwYXRoIGNsYXNzPSJkIiBkPSJtMTQuODcsMTYuNzFjLS43MSwwLTEuMjgtLjU3LTEuMjgtMS4yOHMuNTgtMS4yOCwxLjI4LTEuMjgsMS4yOC41OCwxLjI4LDEuMjgtLjU3LDEuMjgtMS4yOCwxLjI4Wm0xLjAzLDYuMmMtLjI0LDAtLjQzLS4xOS0uNDMtLjQzdi0yLjE3aC0zLjU4djIuMTdjMCwuMjQtLjE5LjQzLS40My40M3MtLjQzLS4xOS0uNDMtLjQzdi0yLjE3aC0zLjU4djIuMTdjMCwuMjQtLjE5LjQzLS40My40M3MtLjQzLS4xOS0uNDMtLjQzdi0yLjE3aC0zLjM5Yy0uMzgsMC0uNjktLjMxLS42OS0uNjl2LTMuM0guNDNjLS4yNCwwLS40My0uMTktLjQzLS40M3MuMTktLjQzLjQzLS40M2gyLjA3di0zLjU4SC40M2MtLjI0LDAtLjQzLS4xOS0uNDMtLjQzcy4xOS0uNDMuNDMtLjQzaDIuMDd2LTMuNThILjQzYy0uMjQsMC0uNDMtLjE5LS40My0uNDNzLjE5LS40My40My0uNDNoMi4wN3YtMy4zYzAtLjM4LjMxLS42OS42OS0uNjloMy4zOVYuNDNjMC0uMjQuMTktLjQzLjQzLS40M3MuNDMuMTkuNDMuNDN2Mi4xN2gzLjU4Vi40M2MwLS4yNC4xOS0uNDMuNDMtLjQzcy40My4xOS40My40M3YyLjE3aDMuNThWLjQzYzAtLjI0LjE5LS40My40My0uNDNzLjQzLjE5LjQzLjQzdjIuMTdoMy4yYy4zOCwwLC42OS4zMS42OS42OXYzLjNoMi4yNmMuMjQsMCwuNDMuMTkuNDMuNDNzLS4xOS40My0uNDMuNDNoLTIuMjZ2My41OGgyLjI2Yy4yNCwwLC40My4xOS40My40M3MtLjE5LjQzLS40My40M2gtMi4yNnYzLjU4aDIuMjZjLjI0LDAsLjQzLjE5LjQzLjQzcy0uMTkuNDMtLjQzLjQzaC0yLjI2djMuM2MwLC4zOC0uMzEuNjktLjY5LjY5aC0zLjJ2Mi4xN2MwLC4yNC0uMTkuNDMtLjQzLjQzWm0tMTIuNDgtMy41MWgxNS44OVYzLjUxSDMuNDJ2MTUuODlaIi8+CiAgPC9nPgo8L3N2Zz4=" alt="" class="char-img">
